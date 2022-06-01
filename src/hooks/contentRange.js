@@ -7,6 +7,7 @@ module.exports = (req, res, next) => {
       res.status(500).send("Error!");
     }
     res.header("Content-Range", `accounts 1-${count}/${count}`);
+    res.header("Access-Control-Allow-Origin", "*");
     next();
   });
 };
