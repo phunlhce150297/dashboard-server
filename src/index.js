@@ -7,7 +7,7 @@ const userRoute = require("./routes/user.route");
 const accountRoute = require("./routes/account.route");
 const db = require("./config/db");
 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 //config parse middleware high-level
 app.use(bodyParser.json());
