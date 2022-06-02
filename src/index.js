@@ -7,7 +7,7 @@ const userRoute = require("./routes/user.route");
 const accountRoute = require("./routes/account.route");
 const db = require("./config/db");
 
-const PORT = process.env.PORT || 5000;
+const PORT = 5000 || process.env.PORT;
 
 //config parse middleware high-level
 app.use(bodyParser.json());
@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: "*",
     methods: "GET,PUT,PATCH,POST,DELETE",
-    allowedHeaders: "Content-Range",
+    allowedHeaders: "*",
   })
 );
 
